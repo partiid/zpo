@@ -29,7 +29,7 @@ public class MainFrame {
 
     private JFrame frame;
     // ścieżka do katalogu z plikami tekstowymi
-    private static final String DIR_PATH = "D:/STUDIA/SEMESTR 4/zpo/lab1/files";
+    private static final String DIR_PATH = FileSystems.getDefault().getPath("./files").toAbsolutePath().normalize().toString();
     // określa ile najczęściej występujących wyrazów bierzemy pod uwagę
     private final int liczbaWyrazowStatystyki;
     private final AtomicBoolean fajrant;
@@ -215,7 +215,7 @@ public class MainFrame {
 
                         //  wyświetlanie statystyk
                         try {
-                            System.out.println(getLinkedCountedWords(filePath.get(), 15));
+                            System.out.println(getLinkedCountedWords(filePath.get(), 5));
 
                         } catch (IOException e) {
                             e.printStackTrace();
@@ -261,13 +261,19 @@ public class MainFrame {
                     //divide lines into words
                     .flatMap(line -> Arrays.stream(line.split(" ")))
                     //filter words by length  > 3
-                    .filter(word -> word.length() > 3)
+                    .filter(word -> word.matches("[a-zA-Z]{3,}"))
                     //convert words to lower case
                     .map(String::toLowerCase)
                     //group words by occurance times
                     .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
-                    //limit words by wordsLimit
                     .entrySet().stream()
+                    .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+                    .limit(wordsLimit)
+
+
+
+
+
 
                     // 1. podział linii na słowa, można skorzystać z wyrażeń regularnych np. "\\s+"
 
@@ -280,6 +286,7 @@ public class MainFrame {
                     // 5. sortowanie względem przechowywanych w mapie wartości, w kolejności malejącej,
                     // można użyć Map.Entry.comparingByValue(Comparator.reverseOrder())
                     // 6. ograniczenie liczby słów do wartości z wordsLimit
+
                     .collect(Collectors.toMap( //umieszczenie elementów strumienia w mapie zachowującej kolejność tj. LinkedHashMap
                             Map.Entry::getKey,
                             Map.Entry::getValue,
