@@ -15,12 +15,12 @@ import javax.persistence.Table;
 import org.hibernate.annotations.CreationTimestamp;
 @Entity
 @Table(name="projekt") //potrzebne tylko jeżeli nazwa tabeli w bazie danych ma być inna od nazwy klasy
-public class Project {
+public class Projekt {
 
-    public Project(){
+    public Projekt(){
 
     }
-    public Project(Integer projekt_id, String nazwa, String opis, LocalDateTime dataCzasUtworzenia, LocalDate dataOddania) {
+    public Projekt(Integer projekt_id, String nazwa, String opis, LocalDateTime dataCzasUtworzenia, LocalDate dataOddania) {
         this.projektId = projekt_id;
         this.nazwa = nazwa;
         this.opis = opis;
@@ -29,7 +29,7 @@ public class Project {
 
     }
 
-    public Project(String nazwa, String opis, LocalDate dataOddania ){
+    public Projekt(String nazwa, String opis, LocalDate dataOddania ){
         this.nazwa = nazwa;
         this.opis = opis;
         this.dataOddania = dataOddania;
@@ -58,10 +58,7 @@ public class Project {
     private LocalDateTime dataCzasUtworzenia;
     @Column(name = "data_oddania")
     private LocalDate dataOddania;
-    /* TODO Wygeneruj dla powyższych zmiennych akcesory (Source -> Generate Getters and Setters).
-     * Dodaj również bezparametrowy konstruktor oraz drugi konstruktor uwzględniający wszystkie powyższe
-     * zmienne, a także trzeci pomijający pola projektId oraz dataCzasUtworzenia.
-     */
+
 
     public List<Task> getTasks() {
         return tasks;

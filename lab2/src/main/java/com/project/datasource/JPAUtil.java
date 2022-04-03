@@ -1,4 +1,4 @@
-package com.project.lab2;
+package com.project.datasource;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

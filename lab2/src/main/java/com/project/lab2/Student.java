@@ -22,13 +22,13 @@ public class Student {
     }
 
     @ManyToMany(mappedBy = "studenci")
-    private Set<Project> projekty;
+    private Set<Projekt> projekty;
 
-    public Set<Project> getProjekty() {
+    public Set<Projekt> getProjekty() {
         return projekty;
     }
 
-    public void setProjekty(Set<Project> projekty) {
+    public void setProjekty(Set<Projekt> projekty) {
         this.projekty = projekty;
     }
 

@@ -1,7 +1,6 @@
 package com.project.lab2;
 
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.ManyToAny;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -26,7 +25,7 @@ public class Task {
     @Column(name="projekt_id")
     private Integer projektId;
 
-    public void setProjekt(Project projekt) {
+    public void setProjekt(Projekt projekt) {
         this.projekt = projekt;
     }
 
@@ -44,13 +43,13 @@ public class Task {
 
     @ManyToOne
     @JoinColumn(name="projekt_id")
-    private Project projekt;
+    private Projekt projekt;
 
-    public Project getProjekt() {
+    public Projekt getProjekt() {
         return projekt;
     }
 
-    public void setProject(Project project) {
+    public void setProject(Projekt project) {
         this.projekt = projekt;
     }
 

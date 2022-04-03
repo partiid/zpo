@@ -257,7 +257,7 @@ public class MainFrame {
         try (BufferedReader reader = Files.newBufferedReader(path)) {// wersja ze wskazaniem kodowania
              //Files.newBufferedReader(path, StandardCharsets.UTF_8);
             return reader.lines() // można też bez buforowania - Files.readAllLines(path)
-                    //dupa
+
                     //divide lines into words
                     .flatMap(line -> Arrays.stream(line.split(" ")))
                     //filter words by length  > 3
