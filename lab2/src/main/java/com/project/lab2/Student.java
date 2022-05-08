@@ -6,6 +6,31 @@ import java.util.Set;
 @Entity
 @Table(name="student")
 public class Student {
+
+    @Id
+    @GeneratedValue
+    @Column(name="student_id")
+    private Integer student_id;
+
+    @Column(name="imie")
+    private String imie;
+
+    @Column(name="nazwisko")
+    private String nazwisko;
+
+    @Column(name="nr_indeksu")
+    private String nrIndeksu;
+
+    @Column(name="email")
+    private String email;
+
+    @Column(name="stacjonarny")
+    private Boolean stacjonarny;
+
+    @ManyToMany(mappedBy = "studenci")
+    private Set<Projekt> projekty;
+
+
     public Student() {
     }
     public Student(String imie, String nazwisko, String nrIndeksu, Boolean stacjonarny) {
@@ -20,35 +45,6 @@ public class Student {
         this.email = email;
         this.stacjonarny = stacjonarny;
     }
-
-    @ManyToMany(mappedBy = "studenci")
-    private Set<Projekt> projekty;
-
-    public Set<Projekt> getProjekty() {
-        return projekty;
-    }
-
-    public void setProjekty(Set<Projekt> projekty) {
-        this.projekty = projekty;
-    }
-
-    @Id
-    @GeneratedValue
-    @Column(name="student_id")
-    private Integer student_id;
-
-    @Column(name="imie")
-    private String imie;
-    @Column(name="nazwisko")
-    private String nazwisko;
-    @Column(name="email")
-    private String email;
-
-    @Column(name="nr_indeksu")
-    private String nrIndeksu;
-    @Column(name="stacjonarny")
-    private Boolean stacjonarny;
-
 
     public Integer getStudent_id() {
         return student_id;
@@ -74,20 +70,20 @@ public class Student {
         this.nazwisko = nazwisko;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getNrIndeksu() {
         return nrIndeksu;
     }
 
     public void setNrIndeksu(String nrIndeksu) {
         this.nrIndeksu = nrIndeksu;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Boolean getStacjonarny() {
@@ -98,9 +94,11 @@ public class Student {
         this.stacjonarny = stacjonarny;
     }
 
+    public Set<Projekt> getProjekty() {
+        return projekty;
+    }
 
-
-
-
-
+    public void setProjekty(Set<Projekt> projekty) {
+        this.projekty = projekty;
+    }
 }

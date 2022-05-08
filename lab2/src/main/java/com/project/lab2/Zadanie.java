@@ -7,51 +7,43 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name="zadanie")
-public class Task {
-    public Task(){
+public class Zadanie {
 
-    }
-    public Task(String nazwa, String opis, Integer kolejnosc){
-        this.nazwa = nazwa;
-        this.opis = opis;
-        this.kolejnosc = kolejnosc;
-
-    }
     @Id
     @GeneratedValue
     @Column(name="zadanie_id")
-    private Integer zadanieId;
+    public Integer zadanieId;
 
-    @Column(name="projekt_id")
-    private Integer projektId;
-
-    public void setProjekt(Projekt projekt) {
-        this.projekt = projekt;
-    }
+    @ManyToOne
+    @JoinColumn(name="projekt_id")
+    private Projekt projekt;
 
     @Column(name="nazwa", nullable=false)
-    private String nazwa;
+    public String nazwa;
+
+
     @Column(name="kolejnosc")
-    private Integer kolejnosc;
+    public Integer kolejnosc;
 
     @Column(name="opis")
     private String opis;
 
     @CreationTimestamp
     @Column(name="dataczas_dodania", nullable=false, updatable=false)
-    private LocalDateTime dataCzasDodania;
+    public LocalDateTime dataCzasDodania;
 
-    @ManyToOne
-    @JoinColumn(name="projekt_id")
-    private Projekt projekt;
 
-    public Projekt getProjekt() {
-        return projekt;
+
+    public Zadanie(){
+
+    }
+    public Zadanie(String nazwa, String opis, Integer kolejnosc){
+        this.nazwa = nazwa;
+        this.opis = opis;
+        this.kolejnosc = kolejnosc;
+
     }
 
-    public void setProject(Projekt project) {
-        this.projekt = projekt;
-    }
 
     public Integer getZadanieId() {
         return zadanieId;
@@ -61,12 +53,12 @@ public class Task {
         this.zadanieId = zadanieId;
     }
 
-    public Integer getProjektId() {
-        return projektId;
+    public Projekt getProjekt() {
+        return projekt;
     }
 
-    public void setProjektId(Integer projektId) {
-        this.projektId = projektId;
+    public void setProjekt(Projekt projekt) {
+        this.projekt = projekt;
     }
 
     public String getNazwa() {
@@ -100,4 +92,6 @@ public class Task {
     public void setDataCzasDodania(LocalDateTime dataCzasDodania) {
         this.dataCzasDodania = dataCzasDodania;
     }
+
+
 }

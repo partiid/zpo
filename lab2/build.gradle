@@ -11,9 +11,11 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 dependencies {
     implementation group: 'org.hsqldb', name: 'hsqldb', version: '2.5.0'
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.29'
     implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.4.13.Final'
     implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
     implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.30'
