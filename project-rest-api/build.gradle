@@ -1,0 +1,42 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.7'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.project'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+ repositories {
+	mavenCentral()
+}
+compileJava {
+	options.encoding = 'windows-1250'
+}
+compileTestJava {
+	options.encoding = 'windows-1250'
+}
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.6.7'
+	implementation 'org.springframework.boot:spring-boot-starter-security:2.6.7'
+	implementation 'org.springframework.boot:spring-boot-starter-web:2.6.7'
+	implementation 'javax.validation:validation-api:2.0.1.Final'
+	implementation 'mysql:mysql-connector-java:8.0.13'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools:2.6.7'
+	runtimeOnly 'org.postgresql:postgresql:42.3.4'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test:2.6.7'
+	testImplementation 'org.springframework.security:spring-security-test:5.6.3'
+}
+
+test {
+	useJUnitPlatform() //aktywacja natywnego wsparcia JUnit 5 (od wersji 4.6 Gradle’a)
+	testLogging {
+		showStandardStreams = true //ustawia drukowanie komunikatów w konsoli
+	}
+}
+
+
+tasks.named('test') {
+
+}
