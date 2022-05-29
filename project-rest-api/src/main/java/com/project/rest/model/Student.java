@@ -18,7 +18,6 @@ public class Student {
 
     @NotBlank(message = "First Name is required")
     @Size(min = 2, max = 30, message = "First Name must be between 2 and 30 characters")
-
     @Column(name="imie")
     private String imie;
 

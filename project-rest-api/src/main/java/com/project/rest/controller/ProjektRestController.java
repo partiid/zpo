@@ -1,6 +1,10 @@
 package com.project.rest.controller;
 import java.net.URI;
+import java.util.Optional;
 import javax.validation.Valid;
+
+import com.project.rest.model.Student;
+import com.project.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -24,10 +28,12 @@ import com.project.service.ProjektService;
 public class ProjektRestController {
 
     private ProjektService projektService;
+    private StudentService studentService;
 
     @Autowired
-    public ProjektRestController(ProjektService projektService) {
+    public ProjektRestController(ProjektService projektService, StudentService studentService) {
         this.projektService = projektService;
+        this.studentService = studentService;
     }
 
     //Przykład żądania wywołującego metodę: GET http://localhost:8080/api/projekty/1
@@ -78,6 +84,29 @@ public class ProjektRestController {
     Page<Projekt> getProjektyByNazwa(@RequestParam String nazwa, Pageable pageable) {
         return projektService.searchByNazwa(nazwa, pageable);
     }
+    @GetMapping("/studenci/{studentId}")
+    public ResponseEntity<Student> getStudent(@PathVariable Integer studentId){
+        return ResponseEntity.of(studentService.getStudent(studentId)); // parametru przekazywana jest w ścieżce
+    }
+
+    @PutMapping("/studenci/{studentId}")
+    public ResponseEntity<Void> updateStudent(@Valid @RequestBody Student student,
+                                              @PathVariable Integer studentId) {
+        return studentService.getStudent(studentId)
+                .map(p -> {
+                    studentService.setStudent(student);
+                    return new ResponseEntity<Void>(HttpStatus.OK); // 200 (można też zwracać 204 - No content)
+                })
+                .orElseGet(() -> ResponseEntity.notFound().build()); // 404 - Not found
+    }
+
+
+    /* student controller */
+    @GetMapping("/studenci")
+    Page<Student> getStudenci(Pageable pageable) {// @PathVariable oznacza, że wartość
+        return studentService.getStudenci(pageable);
+    }
+
 
 
 }
