@@ -1,1 +1,80 @@
-2022-05-15 17:01:54.138 [pool-3-thread-1] ERROR com.project.projektDAO.ProjektDAO.setProjekt(50) - Nie uda�o si� doda� projektuorg.hibernate.PersistentObjectException: detached entity passed to persist: com.project.lab2.Projekt
+2022-06-26 13:31:27.576 [pool-2-thread-1] ERROR c.p.controller.ProjectController.lambda$loadPage$4(183) - Błąd podczas pobierania listy projektów! ({})
+java.lang.NullPointerException: Cannot invoke "com.project.projektDAO.ProjektDAO.getProjekty(java.lang.Integer, java.lang.Integer)" because "this.projektDAO" is null
+	at com.project.lab@1.0-SNAPSHOT/com.project.controller.ProjectController.lambda$loadPage$4(ProjectController.java:170)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-06-26 13:32:51.161 [pool-2-thread-1] ERROR c.p.controller.ProjectController.lambda$loadPage$4(183) - Błąd podczas pobierania listy projektów! ({})
+java.lang.NullPointerException: Cannot invoke "com.project.projektDAO.ProjektDAO.getProjekty(java.lang.Integer, java.lang.Integer)" because "this.projektDAO" is null
+	at com.project.lab@1.0-SNAPSHOT/com.project.controller.ProjectController.lambda$loadPage$4(ProjectController.java:170)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-06-26 13:33:03.364 [pool-2-thread-1] ERROR c.p.controller.ProjectController.lambda$loadPage$4(183) - Błąd podczas pobierania listy projektów! ({})
+java.lang.NullPointerException: Cannot invoke "com.project.projektDAO.ProjektDAO.getProjekty(java.lang.Integer, java.lang.Integer)" because "this.projektDAO" is null
+	at com.project.lab@1.0-SNAPSHOT/com.project.controller.ProjectController.lambda$loadPage$4(ProjectController.java:170)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-06-26 13:33:38.899 [pool-2-thread-1] ERROR c.p.controller.ProjectController.lambda$loadPage$4(183) - Błąd podczas pobierania listy projektów! ({})
+java.lang.NullPointerException: Cannot invoke "com.project.projektDAO.ProjektDAO.getProjekty(java.lang.Integer, java.lang.Integer)" because "this.projektDAO" is null
+	at com.project.lab@1.0-SNAPSHOT/com.project.controller.ProjectController.lambda$loadPage$4(ProjectController.java:170)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-06-26 13:34:01.196 [pool-2-thread-1] ERROR c.p.controller.ProjectController.lambda$loadPage$4(183) - Błąd podczas pobierania listy projektów! ({})
+java.lang.NullPointerException: Cannot invoke "com.project.projektDAO.ProjektDAO.getProjekty(java.lang.Integer, java.lang.Integer)" because "this.projektDAO" is null
+	at com.project.lab@1.0-SNAPSHOT/com.project.controller.ProjectController.lambda$loadPage$4(ProjectController.java:170)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-06-26 13:36:21.250 [pool-2-thread-1] ERROR c.p.controller.ProjectController.lambda$loadPage$4(183) - Błąd podczas pobierania listy projektów! ({})
+java.lang.NullPointerException: Cannot invoke "com.project.projektDAO.ProjektDAO.getProjekty(java.lang.Integer, java.lang.Integer)" because "this.projektDAO" is null
+	at com.project.lab@1.0-SNAPSHOT/com.project.controller.ProjectController.lambda$loadPage$4(ProjectController.java:170)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-06-26 13:37:57.394 [pool-2-thread-1] ERROR c.p.controller.ProjectController.lambda$loadPage$4(183) - Błąd podczas pobierania listy projektów! ({})
+java.lang.NullPointerException: Cannot invoke "com.project.projektDAO.ProjektDAO.getProjekty(java.lang.Integer, java.lang.Integer)" because "this.projektDAO" is null
+	at com.project.lab@1.0-SNAPSHOT/com.project.controller.ProjectController.lambda$loadPage$4(ProjectController.java:170)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-06-26 13:38:45.826 [pool-2-thread-1] ERROR c.p.controller.ProjectController.lambda$loadPage$4(183) - Błąd podczas pobierania listy projektów! ({})
+java.lang.NullPointerException: Cannot invoke "com.project.projektDAO.ProjektDAO.getProjekty(java.lang.Integer, java.lang.Integer)" because "this.projektDAO" is null
+	at com.project.lab@1.0-SNAPSHOT/com.project.controller.ProjectController.lambda$loadPage$4(ProjectController.java:170)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-06-26 13:40:37.092 [pool-2-thread-1] ERROR c.p.controller.ProjectController.lambda$loadPage$4(183) - Błąd podczas pobierania listy projektów! ({})
+java.lang.NullPointerException: Cannot invoke "com.project.projektDAO.ProjektDAO.getProjekty(java.lang.Integer, java.lang.Integer)" because "this.projektDAO" is null
+	at com.project.lab@1.0-SNAPSHOT/com.project.controller.ProjectController.lambda$loadPage$4(ProjectController.java:170)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-06-26 13:42:25.446 [pool-2-thread-1] ERROR c.p.controller.ProjectController.lambda$loadPage$4(183) - Błąd podczas pobierania listy projektów! ({})
+java.lang.NullPointerException: Cannot invoke "com.project.projektDAO.ProjektDAO.getProjekty(java.lang.Integer, java.lang.Integer)" because "this.projektDAO" is null
+	at com.project.lab@1.0-SNAPSHOT/com.project.controller.ProjectController.lambda$loadPage$4(ProjectController.java:170)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-06-26 13:49:35.711 [pool-3-thread-1] ERROR com.project.projektDAO.ProjektDAO.setProjekt(51) - Nie udało się dodać projektuorg.hibernate.PersistentObjectException: detached entity passed to persist: com.project.lab2.Projekt
+2022-06-26 13:56:52.274 [pool-5-thread-1] ERROR com.project.projektDAO.ProjektDAO.setProjekt(51) - Nie udało się dodać projektuorg.hibernate.PersistentObjectException: detached entity passed to persist: com.project.lab2.Projekt
+2022-06-26 13:57:39.675 [pool-6-thread-1] ERROR c.p.controller.ProjectController.lambda$loadPage$4(185) - Błąd podczas pobierania listy projektów! ({})
+java.lang.IllegalArgumentException: first-result value cannot be negative : -20
+	at org.hibernate.orm.core@5.4.13.Final/org.hibernate.query.internal.AbstractProducedQuery.setFirstResult(AbstractProducedQuery.java:922)
+	at org.hibernate.orm.core@5.4.13.Final/org.hibernate.query.internal.AbstractProducedQuery.setFirstResult(AbstractProducedQuery.java:111)
+	at com.project.lab@1.0-SNAPSHOT/com.project.projektDAO.ProjektDAO.getProjekty(ProjektDAO.java:103)
+	at com.project.lab@1.0-SNAPSHOT/com.project.controller.ProjectController.lambda$loadPage$4(ProjectController.java:172)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-06-26 13:57:44.956 [pool-7-thread-1] ERROR c.p.controller.ProjectController.lambda$loadPage$4(185) - Błąd podczas pobierania listy projektów! ({})
+java.lang.IllegalArgumentException: first-result value cannot be negative : -5
+	at org.hibernate.orm.core@5.4.13.Final/org.hibernate.query.internal.AbstractProducedQuery.setFirstResult(AbstractProducedQuery.java:922)
+	at org.hibernate.orm.core@5.4.13.Final/org.hibernate.query.internal.AbstractProducedQuery.setFirstResult(AbstractProducedQuery.java:111)
+	at com.project.lab@1.0-SNAPSHOT/com.project.projektDAO.ProjektDAO.getProjekty(ProjektDAO.java:103)
+	at com.project.lab@1.0-SNAPSHOT/com.project.controller.ProjectController.lambda$loadPage$4(ProjectController.java:172)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)

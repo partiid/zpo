@@ -6,9 +6,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="778.0" prefWidth="804.0" style="-fx-background-color: #fefefe;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.controller.ProjectController">
+<AnchorPane prefHeight="778.0" prefWidth="804.0"  xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.controller.ProjectController">
    <children>
-      <TextField fx:id="txtSzukaj" layoutX="27.0" layoutY="47.0" prefHeight="40.0" prefWidth="246.0" style="-fx-background-color: #fffff;" />
+      <TextField fx:id="txtSzukaj" layoutX="27.0" layoutY="47.0" prefHeight="40.0" prefWidth="246.0" />
       <Button fx:id="searchButton" layoutX="288.0" layoutY="48.0" mnemonicParsing="false" onAction="#onActionSearchButton" prefHeight="40.0" prefWidth="87.0" text="Szukaj" />
       <GridPane layoutX="37.0" layoutY="87.0" prefHeight="90.0" prefWidth="731.0">
         <columnConstraints>
@@ -22,10 +22,10 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="btnPierwsza" mnemonicParsing="false" onAction="#onActionBtnPierwsza" prefHeight="34.0" prefWidth="81.0" text="&amp;u2759;&amp;u25C4;" />
-            <Button fx:id="btnWstecz" mnemonicParsing="false" onAction="#onActionBtnWstecz" prefHeight="35.0" prefWidth="78.0" text="&amp;u25C4;" GridPane.columnIndex="1" />
-            <Button fx:id="btnDalej" mnemonicParsing="false" onAction="#onActionBtnDalej" prefHeight="42.0" prefWidth="82.0" text="&amp;u25BA;" GridPane.columnIndex="3" />
-            <Button fx:id="btnOstatnia" mnemonicParsing="false" onAction="#onActionBtnOstatnia" prefHeight="44.0" prefWidth="82.0" text="&amp;u25BA&amp;u2759;" GridPane.columnIndex="4" />
+            <Button fx:id="btnPierwsza" mnemonicParsing="false" onAction="#onActionBtnPierwsza" prefHeight="34.0" prefWidth="81.0" text="&#x2759;&#x25c4;" />
+            <Button fx:id="btnWstecz" mnemonicParsing="false" onAction="#onActionBtnWstecz" prefHeight="35.0" prefWidth="78.0" text="&#x25c4;" GridPane.columnIndex="1" />
+            <Button fx:id="btnDalej" mnemonicParsing="false" onAction="#onActionBtnDalej" prefHeight="42.0" prefWidth="82.0" text="&#x25ba;" GridPane.columnIndex="3" />
+            <Button fx:id="btnOstatnia" mnemonicParsing="false" onAction="#onActionBtnOstatnia" prefHeight="44.0" prefWidth="82.0" text="&#x25ba;&#x2759;" GridPane.columnIndex="4" />
             <Label fx:id="pageNoLabel" alignment="CENTER" prefHeight="17.0" prefWidth="67.0" text="strona " GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
          </children>
       </GridPane>

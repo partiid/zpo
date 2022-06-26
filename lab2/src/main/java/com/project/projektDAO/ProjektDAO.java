@@ -20,6 +20,7 @@ public class ProjektDAO implements ProjektDAOInterface {
     public Projekt getProjekt(Integer projektId) {
         EntityManager entityManager = JPAUtil.getEntityManager();
         try{
+
             return entityManager.find(Projekt.class, projektId);
 
         }catch (NullPointerException e){

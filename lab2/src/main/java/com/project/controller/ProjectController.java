@@ -38,6 +38,7 @@ public class ProjectController {
 
 
     private ExecutorService wykonawca;
+
     private ProjektDAO projektDAO;
 
     public ProjectController() { }
@@ -166,6 +167,7 @@ public class ProjectController {
     private void loadPage(String search4, Integer pageNo, Integer pageSize) {
         wykonawca.execute(() -> {
             try {
+                projektDAO = new ProjektDAO();
                 List<Projekt> projektList = search4 == null || search4.isEmpty()
                         ? projektDAO.getProjekty(pageNo * pageSize, pageSize)
                         : projektDAO.searchByNazwa(search4, pageNo * pageSize, pageSize);
